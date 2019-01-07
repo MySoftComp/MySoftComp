@@ -12,6 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(CategorySeeder::class);
-        $this->call(SoftwareSeeder::class);
+        $this->call(AudioEditor::class);
+        $this->call(CodeEditor::class);
+        $this->call(GraphicsEditor::class);
+        $this->call(VideoEditor::class);
+        $this->call(TextEditor::class);
+
     }
 }

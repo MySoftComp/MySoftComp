@@ -14,21 +14,23 @@ class CategorySeeder extends Seeder
     {
         //
         DB::table('categories')->insert([
-            'category_id' => 'CE001',
-            'category_name' => 'Source Code Editor',
-            'created_at' => Carbon::now()->toDateTimeString()
+            'name' => 'Source Code Editor',
         ]);
 
         DB::table('categories')->insert([
-            'category_id' => 'TE001',
-            'category_name' => 'Text Editor',
-            'created_at' => Carbon::now()->toDateTimeString()
+            'name' => 'Text Editor',
         ]);
 
         DB::table('categories')->insert([
-            'category_id' => 'VE001',
-            'category_name' => 'Video Editor',
-            'created_at' => Carbon::now()->toDateTimeString()
+            'name' => 'Video Editor',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Audio Editor',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Graphics Editor',
         ]);
     }
 }

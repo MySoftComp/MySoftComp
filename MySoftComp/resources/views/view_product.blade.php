@@ -15,7 +15,7 @@
         @foreach($software as $soft)
           <div class="col-md-3 grid">
             <div class="feat-head">
-              <h2 class="featurette-heading">{{$soft->product_name}}</h2>
+              <h2 class="featurette-heading">{{$soft->name}}</h2>
             </div>
 
             <div class="flip-box">
@@ -24,38 +24,42 @@
                     <img src="../image/logo/{{$soft->imagedir}}" alt="" width="105" height="125">
                 </div>
                 <div class="flip-box-back">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{$soft->id}}">
                     Click for Description
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        @endforeach
-      </div>
-      
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img src="../image/logo/{{$soft->imagedir}}" alt="" width="105" height="125">
-              <p class="lead">{{$soft->product_description}}</p>
-              <p class="lead"><span>Price : </span>Rp {{$soft->price}}</p>
-              <p class="lead"><span>Size  : </span>{{$soft->file_size}} MB</p>
-              <p class="lead"><span>Platform : </span>{{$soft->platform}}</p>
-              <p class="lead"><span>License : </span>{{$soft->license}}</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+          <div class="modal fade" id="exampleModalCenter{{$soft->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">{{$soft->name}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="../image/logo/{{$soft->imagedir}}" alt="" width="105" height="125">
+                  <p class="lead">{{$soft->description}}</p>
+                  <p class="lead"><span>Price : </span>Rp {{number_format($soft->price,2,',','.')}}</p>
+                  <p class="lead"><span>Size  : </span>{{$soft->file_size}} MB</p>
+                  <p class="lead"><span>Platform : </span>{{$soft->platform}}</p>
+                  <p class="lead"><span>License : </span>{{$soft->license}}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
             </div>
           </div>
-        </div>
+
+        @endforeach
       </div>
     </div>
+
 @endsection

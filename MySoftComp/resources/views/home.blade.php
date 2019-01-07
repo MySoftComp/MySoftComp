@@ -26,8 +26,8 @@
   <div class="featurette">
     <div class="row featurette feat">
       <div class="col-md-5 textright">
-        <h2 class="featurette-heading headtext">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-        <p class="lead textright">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading headtext">First<span class="text-muted"></span></h2>
+        <p class="lead textright"></p>
       </div>
       <div class="col-md-4 imagefeat">
         <img src="../image/home_1.jpg" alt="" class="rounded">
@@ -39,15 +39,15 @@
         <img src="../image/home_2.jpeg" class="rounded">
       </div>
       <div class="col-md-5 textleft">
-        <h2 class="featurette-heading headtext">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-        <p class="lead textleft">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading headtext">Second<span class="text-muted"></span></h2>
+        <p class="lead textleft"></p>
       </div>
     </div>
     <hr class="featurette-divider">
       <div class="row featurette feat">
         <div class="col-md-5 textright">
-          <h2 class="featurette-heading headtext">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead textright">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading headtext">Third<span class="text-muted"></span></h2>
+          <p class="lead textright"></p>
         </div>
         <div class="col-md-4 imagefeat">
           <img src="../image/picture1.png" alt="" class="rounded">
