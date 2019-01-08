@@ -91,41 +91,87 @@ body{
         height: 100%;
         margin-top: 55px;
     }
-    
+
     .category{
         text-align: center;
     }
-    
+
     .box-compare{
         text-align: center;
         display: flex;
-        padding-left: 475px;
+        padding-left: 18%;
         padding-top: 75px;
     }
-    
+
     .border{
         width: 425px;
         height: 375px;
         border: 1px solid rgb(82, 101, 112);
         box-sizing: border-box;
     }
-    
+
     .border-content{
         margin-top: 15px;
         font-size: 31px;
     }
-    
+
+    #item1.itemBox1{
+        border-radius : 12px;
+        border: solid 1px grey;
+    }
+
+    .itemBox2{
+        border-radius : 12px;
+        border: solid 1px grey;
+    }
+
     .imagesoft img{
         width: 375px;
         height: 225px;
     }
-    
+
+    .Compare-content{
+        margin-left: 10%;
+    }
+
+    .Compare-content table td{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 400px;
+        border: solid 1px grey;
+        text-align: center;
+    }
+
+    .Compare-content table td.textCompare{
+        padding-right: 200px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .Compare-content table tr td img{
+        width: 200px;
+    }
+
+    .Compare-content table tr td.suggestCompare h3{
+        text-align: center;
+        margin-left: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: -20px;
+        padding-bottom: -20px;
+    }
+
+    .Compare-content h3{
+        text-align: center;
+        margin-left: -10%;
+    }
+
     .icon{
         margin-top: 17%;
         margin-left: 25px;
         margin-right: 25px;
     }
-    
+
     .icon img{
         width: 75px;
         height: 75px;
