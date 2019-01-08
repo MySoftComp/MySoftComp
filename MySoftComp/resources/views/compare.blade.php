@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/style_compare.css')}}">
     <link rel="stylesheet" href="{{asset('intro.js-2.9.3/introjs.css')}}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 @endsection
 @section('title')
 @section('main')
@@ -36,17 +41,19 @@
                             </div>
                             <div class="dropcategory">
                                 <div class="itemBox">
-                                    <input class="itemBox1" type="text" value="{{\Illuminate\Support\Facades\Session::get("item1")}}" placeholder="Software1..." name="item1">
+                                    <input class="itemBox1" type="text" value="{{\Illuminate\Support\Facades\Session::get("item1")}}" placeholder="Software1..." name="item1" id="item1">
+                                    <div id="nameList"></div>
                                 </div>
                             </div>
                         @else
-                            <span>Software Name</span>
+                            <span>Software 1</span>
                             <div class="imagesoft">
                                 <img src="image/logo.png" alt="">
                             </div>
                             <div class="dropcategory">
                                 <div class="itemBox">
-                                    <input class="itemBox1" value="" type="text" placeholder="Software1..." name="item1">
+                                    <input class="itemBox1" value="" type="text" placeholder="Software1..." name="item1" id="item1">
+                                    <div id="nameList"></div>
                                 </div>
                             </div>
                         @endif
@@ -66,18 +73,20 @@
                             </div>
                             <div class="dropcategory">
                                 <div class="itemBox">
-                                    <input class="itemBox2" value="{{\Illuminate\Support\Facades\Session::get("item2")}}" type="text" placeholder="Software2..." name="item2">
+                                    <input class="itemBox2" value="{{\Illuminate\Support\Facades\Session::get("item2")}}" type="text" placeholder="Software2..." name="item2" id="item2">
+                                    <div id="nameList"></div>
                                 </div>
                             </div>
                         @else
-                            <span>Software Name</span>
+                            <span>Software 2</span>
                             <div class="imagesoft">
                                 <img src="image/logo.png" alt="">
                             </div>
 
                             <div class="dropcategory">
                                 <div class="itemBox">
-                                    <input class="itemBox2" value="" type="text" placeholder="Software2..." name="item2">
+                                    <input class="itemBox2" value="" type="text" placeholder="Software2..." name="item2" itemid="item2">
+                                    <div id="nameList"></div>
                                 </div>
                             </div>
                         @endif
@@ -94,15 +103,21 @@
                 <h3>{{$soft->category}}</h3>
                 <table>
                     <tr>
+                    </tr>
+                    <tr>
+                        <td class="textCompare">Image </td>
                         <td><img src="/image/logo/{{$soft->imagedir1}}" alt=""></td>
                         <td><img src="/image/logo/{{$soft->imagedir2}}" alt=""></td>
                     </tr>
                     <tr>
+                        <td class="textCompare">Name</td>
                         <td>{{$soft->name1}}</td>
                         <td>{{$soft->name2}}</td>
                     </tr>
                     <tr>
+                        <td class="textCompare">File Size</td>
                         <td>
+
                             @if($soft->file_size1 < $soft->file_size2)
                             &radic;
                             @endif
@@ -116,6 +131,7 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="textCompare">Price </td>
                         <td>
                             @if($soft->price1 < $soft->price2)
                                 &radic;
@@ -130,6 +146,7 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="textCompare">Operating System</td>
                         <td>
                             @if($soft->platform_count1 > $soft->platform_count2)
                             &radic;
@@ -144,14 +161,49 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="textCompare">Lincense </td>
                         <td>{{$soft->license1}}</td>
                         <td>{{$soft->license2}}</td>
                     </tr>
+                    <tr>
+                      <td colspan="3" class="suggestCompare">
+                          <h3>{{$soft->Suggest}}</h3>
+                      </td>
+
+
+                    </tr>
                 </table>
-                <h3>{{$soft->Suggest}}</h3>
+
             @endforeach
         </div>
         @endif
     </div>
     <script src="{{asset('intro.js-2.9.3/intro.js')}}"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#item1').keyup(function(){
+                var query = $(this).val();
+                if(query != '')
+                {
+                    var _token = $('input[name="_token"]').val();
+                    $.ajax({
+                        url:"{{ route('compare.fetch') }}",
+                        method:"POST",
+                        data:{query:query, _token:_token},
+                        success:function(data){
+                            $('#nameList').fadeIn();
+                            $('#nameList').html(data);
+                        }
+                    });
+                }
+            });
+
+            $(document).on('click', 'li', function(){
+                $('#item1').val($(this).text());
+                $('#nameList').fadeOut();
+            });
+
+        });
+    </script>
 @endsection
