@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Software;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
 class SoftwareController extends Controller
 {
     //
