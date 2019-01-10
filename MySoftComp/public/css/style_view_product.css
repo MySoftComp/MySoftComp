@@ -27,6 +27,7 @@ body{
 .nav-link:hover{
     color:  darkslategrey !important;
 }
+
 /* Container */
 .content{
     color: white;
@@ -42,6 +43,10 @@ body{
     padding-bottom: 15px;
 }
 
+.featurette-heading{
+    font-size: 17px;
+}
+
 .feat{
     margin-top: 15px;
 }
@@ -55,15 +60,15 @@ body{
 }
 
 .grid{
+    margin-left: 20px;
     margin-bottom: 35px;
-    margin-left: 25px;
 }
 
 .flip-box {
     background-color: transparent;
     width: 280px;
     height: 200px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; /*Remove this if you don't want the 3D effect*/
 }
   
 /* This container is needed to position the front and back side */
@@ -110,7 +115,45 @@ body{
     margin: 15px 0 25px 105px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1366px) {
+    .navigasi{
+        position: sticky;
+    }
+    
+    .navbar-brand{
+        margin-right: 50px;
+    }
+
+    .nav-link{
+        margin-right: 35px;
+    }
+
+    .featurette{
+        padding-top: 0;
+        padding-left: 37px;
+    }
+
+    .feat{
+        padding-left: 95px;
+        padding-right: 65px;
+        text-align: justify;
+    }
+
+    .feat-body{
+        padding-top: 15px;
+    }
+
+    .grid{
+        margin-left: 0px;
+        margin-bottom: 35px;
+    }
+
+    .modal-body img{
+        margin: 15px 0 25px 325px;
+    }
+}
+
+@media (min-width: 1920px) {
     .navigasi{
         position: sticky;
     }

@@ -73,7 +73,70 @@ body{
     margin-bottom: 15px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1366px) {
+    .navigasi{
+        position: sticky;
+    }
+    .navbar-brand{
+        margin-right: 50px;
+    }
+    .nav-link{
+        margin-right: 35px;
+    }
+    .jumbotron{
+        background-image: url('../image/background2.png');
+        background-size: cover;
+        height: 580px;
+    }
+    .featurette{
+        margin-top: 55px;
+    }
+    .feat{
+        text-align: justify;
+        padding-bottom: 55px;
+    }
+    .imagefeat{
+        left: 200px;
+    }
+    .imagefeat img{
+        width: 475px;
+        height: 375px;   
+    }
+    
+    .imagefeat1{
+        left: 95px;
+    }
+
+    .imagefeat1 img{
+        width: 525px;
+        height: 375px;
+    }
+
+    .container button{
+        margin-top: 225px;
+        margin-left: 500px;
+    }
+
+    .headtext{
+        font-size: 35px;
+    }
+
+    .textright{
+        margin-top: 35px;
+        text-align: left;
+        font-size: 25px;
+        left: 100px;
+    }
+
+    .textleft{
+        text-align: left;
+        font-size: 25px;
+        left: 275px;
+    }
+    
+}
+
+@media (min-width: 1920px) {
     .navigasi{
         position: sticky;
     }

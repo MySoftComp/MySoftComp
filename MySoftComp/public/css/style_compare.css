@@ -42,12 +42,12 @@ body{
     text-align: center;
     display: flex;
     padding-top: 45px;
-    padding-left: 7px;
+    padding-left: 9px;
 }
 
 .border{
-    width: 175px;
-    height: 200px;
+    width: 140px;
+    height: 185px;
     border: 1px solid rgb(82, 101, 112);
     box-sizing: border-box;
 }
@@ -67,6 +67,55 @@ body{
     height: 100px;
 }
 
+#item1.itemBox1{
+    border-radius : 12px;
+    width: 120px;
+    border: solid 1px grey;
+}
+
+.itemBox2{
+    border-radius : 12px;
+    width: 120px;
+    border: solid 1px grey;
+}
+
+.Compare-content{
+    margin-left: 9px;
+}
+
+.Compare-content table td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 114px;
+    border: solid 1px grey;
+    text-align: center;
+}
+
+.Compare-content table td.textCompare{
+    padding-right: 0;
+    text-align: left;
+    padding-left: 0;
+}
+
+.Compare-content table tr td img{
+    width: 75px;
+}
+
+.Compare-content table tr td.suggestCompare h3{
+    text-align: center;
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    padding-bottom: -20px;
+}
+
+.Compare-content h3{
+    text-align: center;
+    font-size: 19px;
+    margin-left: -3%;
+}
+
 .icon{
     margin-top: 20%;
 }
@@ -76,7 +125,7 @@ body{
     height: 45px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1366px) {
     .navigasi{
         position: sticky;
     }
@@ -99,7 +148,7 @@ body{
     .box-compare{
         text-align: center;
         display: flex;
-        padding-left: 18%;
+        padding-left: 175px;
         padding-top: 75px;
     }
 
@@ -117,11 +166,13 @@ body{
 
     #item1.itemBox1{
         border-radius : 12px;
+        width: 350px;
         border: solid 1px grey;
     }
 
     .itemBox2{
         border-radius : 12px;
+        width: 350px;
         border: solid 1px grey;
     }
 
@@ -131,7 +182,7 @@ body{
     }
 
     .Compare-content{
-        margin-left: 10%;
+        margin-left: 75px;
     }
 
     .Compare-content table td{
@@ -163,7 +214,109 @@ body{
 
     .Compare-content h3{
         text-align: center;
-        margin-left: -10%;
+        margin-left: -7%;
+    }
+
+    .icon{
+        margin-top: 17%;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .icon img{
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .navigasi{
+        position: sticky;
+    }
+    .navbar-brand{
+        margin-right: 50px;
+    }
+    .nav-link{
+        margin-right: 35px;
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        margin-top: 55px;
+    }
+
+    .category{
+        text-align: center;
+    }
+
+    .box-compare{
+        text-align: center;
+        display: flex;
+        padding-left: 450px;
+        padding-top: 75px;
+    }
+
+    .border{
+        width: 425px;
+        height: 375px;
+        border: 1px solid rgb(82, 101, 112);
+        box-sizing: border-box;
+    }
+
+    .border-content{
+        margin-top: 15px;
+        font-size: 31px;
+    }
+
+    #item1.itemBox1{
+        border-radius : 12px;
+        border: solid 1px grey;
+    }
+
+    .itemBox2{
+        border-radius : 12px;
+        border: solid 1px grey;
+    }
+
+    .imagesoft img{
+        width: 375px;
+        height: 225px;
+    }
+
+    .Compare-content{
+        margin-left: 300px;
+    }
+
+    .Compare-content table td{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 400px;
+        border: solid 1px grey;
+        text-align: center;
+    }
+
+    .Compare-content table td.textCompare{
+        padding-right: 200px;
+        text-align: left;
+        padding-left: 200px;
+    }
+
+    .Compare-content table tr td img{
+        width: 200px;
+    }
+
+    .Compare-content table tr td.suggestCompare h3{
+        text-align: center;
+        margin-left: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: -20px;
+        padding-bottom: -20px;
+    }
+
+    .Compare-content h3{
+        text-align: center;
+        margin-left: -20%;
     }
 
     .icon{
