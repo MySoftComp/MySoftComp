@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class VideoEditor extends Seeder
 {
     /**
@@ -34,7 +32,6 @@ class VideoEditor extends Seeder
             'license' => 'Trialware',
             'imagedir' => 'avs.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 3,
             'name' => 'Sony Vegas Pro',
@@ -46,7 +43,6 @@ class VideoEditor extends Seeder
             'license' => 'Purchase',
             'imagedir' => 'sonyvegas.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 3,
             'name' => 'Corel VideoStudio',
@@ -58,7 +54,6 @@ class VideoEditor extends Seeder
             'license' => 'Purchase',
             'imagedir' => 'corelstudio.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 3,
             'name' => 'Adobe Premiere Pro',
@@ -70,7 +65,6 @@ class VideoEditor extends Seeder
             'license' => 'Trialware',
             'imagedir' => 'premiere.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 3,
             'name' => 'Wondershare Filmora',
@@ -82,7 +76,6 @@ class VideoEditor extends Seeder
             'license' => 'Trialware',
             'imagedir' => 'filmora.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 3,
             'name' => 'ShotCut',
@@ -138,6 +131,5 @@ class VideoEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'virtualdub.png',
         ]);
-
     }
 }

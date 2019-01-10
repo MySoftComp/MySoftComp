@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class AudioEditor extends Seeder
 {
     /**
@@ -12,9 +10,7 @@ class AudioEditor extends Seeder
     public function run()
     {
         //id = 4
-
         // 'Free','Trialware', dan 'Purchase' ya
-
         DB::table('software')->insert([
             'category_id' => 4,
             'name' => 'Audacity',
@@ -25,7 +21,6 @@ class AudioEditor extends Seeder
             'platform_count' => 2,
             'license' => 'Free',
             'imagedir'=> 'Audacity.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -37,7 +32,6 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Trialware',
             'imagedir'=> 'Podium.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -49,7 +43,6 @@ class AudioEditor extends Seeder
             'platform_count' => 2,
             'license' => 'Free',
             'imagedir'=> 'ocenaudio.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -61,7 +54,6 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Trialware',
             'imagedir'=> 'FLStudio.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -73,9 +65,7 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> 'SOundForge.png',
-
         ]);
-
         DB::table('software')->insert([
             'category_id' => 4,
             'name' => 'REAPER',
@@ -86,7 +76,6 @@ class AudioEditor extends Seeder
             'platform_count' => 2,
             'license' => 'Trialware',
             'imagedir'=> 'Reaper.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -98,7 +87,6 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Trialware',
             'imagedir'=> 'AbletonLive.png',
-
         ]);
 //        DB::table('software')->insert([
 //            'category_id' => 4,
@@ -122,7 +110,6 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> 'AudioTool.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -134,7 +121,6 @@ class AudioEditor extends Seeder
             'platform_count' => 2,
             'license' => 'Free',
             'imagedir'=> 'Wavepad.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -146,7 +132,6 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> 'Wavosaur.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 4,
@@ -158,7 +143,6 @@ class AudioEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> 'QTractor.png',
-
         ]);
     }
 }

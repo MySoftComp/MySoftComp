@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class CodeEditor extends Seeder
 {
     /**
@@ -24,7 +22,6 @@ class CodeEditor extends Seeder
             'license' => 'Trialware',
             'imagedir'=> 'sublime.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'Atom',
@@ -36,7 +33,6 @@ class CodeEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'atom.png'
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'Visual Studio Code',
@@ -48,7 +44,6 @@ class CodeEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'vscode.png'
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'jEdit',
@@ -60,7 +55,6 @@ class CodeEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'jedit.png'
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'Coffee Cup',
@@ -72,7 +66,6 @@ class CodeEditor extends Seeder
             'license' => 'Trialware',
             'imagedir' => 'coffeecup.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'Notepad++',
@@ -84,7 +77,6 @@ class CodeEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'notepad.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'Android SDK',
@@ -96,7 +88,6 @@ class CodeEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'androidsdk.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'Visual Studio Professional 2015',
@@ -108,7 +99,6 @@ class CodeEditor extends Seeder
             'license' => 'Purchase',
             'imagedir' => 'VisualStudioProfessional2015.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 1,
             'name' => 'BlueJ',

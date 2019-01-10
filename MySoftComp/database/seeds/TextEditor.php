@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class TextEditor extends Seeder
 {
     /**
@@ -34,7 +32,6 @@ class TextEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'openoffice.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 2,
             'name' => 'LibreOffice',
@@ -46,7 +43,6 @@ class TextEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'libreoffice.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 2,
             'name' => 'WPS Office Premium',
@@ -58,7 +54,6 @@ class TextEditor extends Seeder
             'license' => 'Trialware',
             'imagedir' => 'wpsoffice.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 2,
             'name' => 'Polaris Office',
@@ -70,7 +65,6 @@ class TextEditor extends Seeder
             'license' => 'Free',
             'imagedir' => 'polarisoffice.png',
         ]);
-
         DB::table('software')->insert([
             'category_id' => 2,
             'name' => 'iWork',

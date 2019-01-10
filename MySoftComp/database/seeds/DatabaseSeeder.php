@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,6 +15,5 @@ class DatabaseSeeder extends Seeder
         $this->call(GraphicsEditor::class);
         $this->call(VideoEditor::class);
         $this->call(TextEditor::class);
-
     }
 }

@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class GraphicsEditor extends Seeder
 {
     /**
@@ -22,7 +20,6 @@ class GraphicsEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> '3dviashape.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 5,
@@ -34,7 +31,6 @@ class GraphicsEditor extends Seeder
             'platform_count' => 2,
             'license' => 'Free',
             'imagedir'=> 'librecad.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 5,
@@ -79,7 +75,6 @@ class GraphicsEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> 'artweaver.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 5,
@@ -91,7 +86,6 @@ class GraphicsEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Trialware',
             'imagedir'=> 'cyberlinkphotodirector.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 5,
@@ -105,7 +99,6 @@ class GraphicsEditor extends Seeder
             'imagedir'=> 'captureoneproformac.png',
         ]);
         DB::table('software')->insert([
-
             'category_id' => 5,
             'name' => 'Pixlr',
             'description' => 'Pixlr tools provide more control over your photo editing process. Add focus to your photos and emphasize exactly what you want.Add effects like crosshatch, halftone, and dapple with a single click. Your options are limitless with hundreds of effects, overlays, stickers, and borders to choose from - experiment with different effect combinations and amaze yourself with the stunning art you create.',
@@ -115,7 +108,6 @@ class GraphicsEditor extends Seeder
             'platform_count' => 1,
             'license' => 'Free',
             'imagedir'=> 'pixlr.png',
-
         ]);
         DB::table('software')->insert([
             'category_id' => 5,
