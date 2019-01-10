@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="{{asset('intro.js-2.9.3/introjs.css')}}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 @endsection
 @section('title')
@@ -19,14 +18,14 @@
     <div class="content">
         <div class="dropdown category">
             <a class="btn btn-large btn-primary" href="javascript:void(0);" onclick="javascript:introJs().start();">Tour</a>
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-step="1" data-intro="Halo, kamu bisa memilih kategori software disini">
+            {{-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-step="1" data-intro="Halo, kamu bisa memilih kategori software disini">
                 Choose Category
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a methods="post" class="dropdown-item" href="#">Code Editor</a>
                 <a class="dropdown-item" href="#">Text Editor</a>
                 <a class="dropdown-item" href="#">Video Editor</a>
-            </div>
+            </div> --}}
         </div>
         <form action="/Comparing" method="POST" >
             {{csrf_field()}}
@@ -61,7 +60,7 @@
                 </div>
 
                 <div class="icon" data-step="5" data-intro="Terakhir tekan tombol ini untuk melihat hasil compare softwaremu">
-                        <button><img src="image/graph.png" alt=""></button>
+                    <button><img src="image/graph.png" alt=""></button>
                 </div>
 
                 <div class="border" data-step="4" data-intro="Sekarang, kamu bisa pilih satu software lagi sebagai perbandingan" data-position='right'>
@@ -169,41 +168,11 @@
                       <td colspan="3" class="suggestCompare">
                           <h3>{{$soft->Suggest}}</h3>
                       </td>
-
-
                     </tr>
                 </table>
-
             @endforeach
         </div>
         @endif
     </div>
     <script src="{{asset('intro.js-2.9.3/intro.js')}}"></script>
-    <script>
-        $(document).ready(function(){
-
-            $('#item1').keyup(function(){
-                var query = $(this).val();
-                if(query != '')
-                {
-                    var _token = $('input[name="_token"]').val();
-                    $.ajax({
-                        url:"{{ route('compare.fetch') }}",
-                        method:"POST",
-                        data:{query:query, _token:_token},
-                        success:function(data){
-                            $('#nameList').fadeIn();
-                            $('#nameList').html(data);
-                        }
-                    });
-                }
-            });
-
-            $(document).on('click', 'li', function(){
-                $('#item1').val($(this).text());
-                $('#nameList').fadeOut();
-            });
-
-        });
-    </script>
 @endsection

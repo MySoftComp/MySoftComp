@@ -13,31 +13,54 @@
     <!-- Content -->
     <!-- Featurette -->
     <div class="featurette">
-        <div class="row featurette feat">
-            <div class="col-md-5 textright">
-                <h2 class="featurette-heading headtext">Pilih category software yang ingin anda bandingkan.</h2>
-            </div>
-            <div class="col-md-4 imagefeat">
-                <img src="../image/howTo/howTo1.jpg" alt="" class="rounded">
-            </div>
+      <div class="row featurette feat">
+        <div class="col-md-6">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <hr class="featurette-divider">
-        <div class="row featurette feat">
-            <div class="col-md-4 imagefeat1">
-                <img src="../image/howTo/howTo2.jpg" class="rounded">
-            </div>
-            <div class="col-md-5 textleft">
-                <h2 class="featurette-heading headtext">Masukkan nama software dari kategori yang anda ingin bandingkan.</h2>
-            </div>
+        <div class="col-md-1 imagefeat">
+          <img src="../image/picture1.png" alt="" class="rounded">
         </div>
-        <hr class="featurette-divider">
+      </div>
+      <hr class="featurette-divider">
         <div class="row featurette feat">
-            <div class="col-md-5 textright">
-                <h2 class="featurette-heading headtext">Tekan tombol search dan MySoftComp akan menampilkan perbandingan software yang ingin dibandingkan.</h2>
-            </div>
-            <div class="col-md-4 imagefeat">
-                <img src="../image/howTo/howTo3.jpg" alt="" class="rounded">
-            </div>
+          <div class="col-md-6">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-1 imagefeat">
+            <img src="../image/picture1.png" class="rounded">
+          </div>
+        </div>
+      <hr class="featurette-divider">
+        <div class="row featurette feat">
+          <div class="col-md-6">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-1 imagefeat">
+            <img src="../image/picture1.png" alt="" class="rounded">
+          </div>
+        </div>
+      <hr class="featurette-divider">
+        <div class="row featurette feat">
+          <div class="col-md-6">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-1 imagefeat">
+            <img src="../image/picture1.png" alt="" class="rounded">
+          </div>
+        </div>
+      <hr class="featurette-divider">
+        <div class="row featurette feat">
+          <div class="col-md-6">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-1 imagefeat">
+            <img src="../image/picture1.png" alt="" class="rounded">
+          </div>
         </div>
     </div>
     <!-- End Featurette -->
