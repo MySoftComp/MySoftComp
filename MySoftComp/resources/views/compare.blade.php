@@ -15,7 +15,7 @@
 @endsection
 @section('title')
 @section('main')
-    <div class="content">
+    <div class="content" data-step="1" data-intro="Selamat datang di page compare, sekarang kita lihat-lihat sebentar yuk ada apa aja disini">
         <div class="dropdown category">
             <a class="btn btn-large btn-primary" href="javascript:void(0);" onclick="javascript:introJs().start();">Tour</a>
             {{-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-step="1" data-intro="Halo, kamu bisa memilih kategori software disini">
