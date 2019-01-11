@@ -1,12 +1,12 @@
 <?php
 namespace App\Http\Controllers;
-    use App\compare;
-    use App\Software;
-    use Illuminate\Http\Request;
-    use Illuminate\Support\Facades\Cookie;
-    use Illuminate\Support\Facades\Session;
-    use MongoDB\Driver\Query;
-    use phpDocumentor\Reflection\DocBlock\Tags\See;
+use App\compare;
+use App\Software;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
+use MongoDB\Driver\Query;
+use phpDocumentor\Reflection\DocBlock\Tags\See;
 class CompareController extends Controller
 {
     //
@@ -16,16 +16,16 @@ class CompareController extends Controller
             if($request->item1 == $request->item2){
                 return redirect('/compare');
             }
-            if(Software::where('name',$request->item1)->first()){
-                $item1 = Software::where('name',$request->item1)->first();
+            if(Software::where('name','LIKE','%'.$request->item1.'%')->first()){
+                $item1 = Software::where('name','LIKE','%'.$request->item1.'%')->first();
                 Session::put('item1',$item1->name);
                 Session::put('image1',$item1->imagedir);
             }else{
                 return redirect('/compare')->with('error',$request->item1.' tidak tersedia di dalam database');
             }
             if ($request->get('item2') != null){
-                if(Software::where('name',$request->item2)->first()){
-                    $item2 = Software::where('name',$request->item2)->first();
+                if(Software::where('name','LIKE','%'.$request->item2.'%')->first()){
+                    $item2 = Software::where('name','LIKE','%'.$request->item2.'%')->first();
                     Session::put('item2',$item2->name);
                     Session::put('image2',$item2->imagedir);
                 }else{
@@ -77,6 +77,7 @@ class CompareController extends Controller
                     $suggest->platform_count1 = $item1->platform_count;
                     $suggest->license1 = $item1->license;
                     $suggest->imagedir1 = $item1->imagedir;
+
                     $suggest->name2 = $item2->name;
                     $suggest->price2 = $item2->price;
                     $suggest->file_size2 = $item2->file_size;
@@ -104,9 +105,13 @@ class CompareController extends Controller
             return redirect('/compare');
         }else{
             if($request->get('item2') != null){
-                $item = Software::where('name',$request->item2)->first();
-                Session::put('item2',$item->name);
-                Session::put('image2',$item->imagedir);
+                if(Software::where('name','LIKE','%'.$request->item2.'%')->first()){
+                    $item2 = Software::where('name','LIKE','%'.$request->item2.'%')->first();
+                    Session::put('item2',$item2->name);
+                    Session::put('image2',$item2->imagedir);
+                }else{
+                    return redirect('/compare')->with('error',$request->item2.' tidak tersedia di dalam database');
+                }
                 return redirect('/compare');
             }else{
                 Session::flush();
