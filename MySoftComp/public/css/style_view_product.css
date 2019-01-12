@@ -1,12 +1,11 @@
 @font-face {
-	font-family: 'oswald';
-	src: url('../font/Oswald-Regular.ttf');
+    font-family: 'oswald';
+    src: url('../font/Oswald-Regular.ttf');
 }
 
 body{
     overflow-x: hidden;
 }
-
 /* Navbar */
 .navbar{
     width: 100%;
@@ -70,7 +69,7 @@ body{
     height: 200px;
     perspective: 1000px; /*Remove this if you don't want the 3D effect*/
 }
-  
+
 /* This container is needed to position the front and back side */
 .flip-box-inner {
     position: relative;
@@ -80,12 +79,12 @@ body{
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-  
+
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
 }
-  
+
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
     position: absolute;
@@ -93,13 +92,13 @@ body{
     height: 100%;
     backface-visibility: hidden;
 }
-  
+
 /* Style the front side */
 .flip-box-front {
     background-color: rgb(255, 255, 255);
     color: black;
 }
-  
+
 /* Style the back side */
 .flip-box-back {
     background-color: #007bff;
@@ -114,12 +113,29 @@ body{
 .modal-body img{
     margin: 15px 0 25px 105px;
 }
-
+/*search feature*/
+.search-box{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+.search-input{
+    border-radius: 5px;
+    width: 50%;
+    padding-left: 10px
+}
+.search-button{
+    border-radius: 5px;
+    width: 20%;
+    color: black;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue
+}
 @media (min-width: 1366px) {
     .navigasi{
         position: sticky;
     }
-    
+
     .navbar-brand{
         margin-right: 50px;
     }
@@ -151,13 +167,34 @@ body{
     .modal-body img{
         margin: 15px 0 25px 325px;
     }
+    .search-box{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px
+    }
+    .search-input{
+        font-size: large;
+        height: 40px;
+        border-radius: 5px;
+        width: 370px;
+        padding-left: 10px
+    }
+    .search-button{
+        font-size: large;
+        height: 40px;
+        border-radius: 5px;
+        width: 90px;
+        color: black;
+        background-color: cornflowerblue;
+        border-color: cornflowerblue
+    }
 }
 
 @media (min-width: 1920px) {
     .navigasi{
         position: sticky;
     }
-    
+
     .navbar-brand{
         margin-right: 50px;
     }
@@ -188,5 +225,26 @@ body{
 
     .modal-body img{
         margin: 15px 0 25px 325px;
+    }
+    .search-box{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px
+    }
+    .search-input{
+        font-size: x-large;
+        height: 55px;
+        border-radius: 5px;
+        width: 400px;
+        padding-left: 10px
+    }
+    .search-button{
+        font-size: x-large;
+        height: 55px;
+        border-radius: 5px;
+        width: 110px;
+        color: black;
+        background-color: cornflowerblue;
+        border-color: cornflowerblue
     }
 }
